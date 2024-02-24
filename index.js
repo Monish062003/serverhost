@@ -6,6 +6,12 @@ const {MongoClient} = require('mongodb');
 app.use(express.urlencoded());
 app.use(bodyParser.json());
 
+app.use(cors({
+    origin:"https://serverhost-chi.vercel.app/",
+    methods:["POST","GET"],
+    credentials : true
+}))
+
 let [db,client,collection] = '';
 async function connectToDatabase() {
     try {
