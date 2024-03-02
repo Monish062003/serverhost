@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 
+
 let [db,client,collection] = '';
 async function connectToDatabase() {
     try {
